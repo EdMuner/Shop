@@ -12,7 +12,7 @@ namespace Shop.Web.Data.Entities
     {
         public int Id { get; set; }
 
-        [MaxLength(50)]
+        [MaxLength(50, ErrorMessage = "The fiel {0} only can contain {1} characters lenght.")]
         [Required]
         public string Name { get; set; }
 
