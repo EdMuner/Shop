@@ -19,7 +19,7 @@ namespace Shop.Web.Controllers
         private readonly IRepository repository;
         private readonly IUserHelper userHelper;
 
-        public ProductsController(IRepository repository, IserHelper userHelper)
+        public ProductsController(IRepository repository, IUserHelper userHelper)
         {
             this.repository = repository;
             this.userHelper = userHelper;
