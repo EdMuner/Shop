@@ -34,7 +34,7 @@ namespace Shop.Web.Data
 
         public void UpdateProduct(Product product)
         {
-            this.context.Products.Update(product);
+            this.context.Update(product);
         }
 
         public void RemoveProduct(Product product)
@@ -51,7 +51,6 @@ namespace Shop.Web.Data
         {
             return this.context.Products.Any(p => p.Id == id);
         }
-
-
     }
+
 }

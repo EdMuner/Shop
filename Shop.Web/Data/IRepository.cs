@@ -12,15 +12,14 @@ namespace Shop.Web.Data
 
         Product GetProduct(int id);
 
-        IEnumerable<Product> GetProducts(int value);
+        IEnumerable<Product> GetProducts();
 
         bool ProductExists(int id);
 
         void RemoveProduct(Product product);
 
         Task<bool> SaveAllAsync();
-       
+
         void UpdateProduct(Product product);
-        object GetProducts();
     }
 }
