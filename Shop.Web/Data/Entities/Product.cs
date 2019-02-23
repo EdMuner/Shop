@@ -1,19 +1,13 @@
-﻿
-
-namespace Shop.Web.Data.Entities
+﻿namespace Shop.Web.Data.Entities
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
     using System.ComponentModel.DataAnnotations;
 
     public class Product : IEntity
-
     {
         public int Id { get; set; }
 
-        [MaxLength(50, ErrorMessage = "The fiel {0} only can contain {1} characters lenght.")]
+        [MaxLength(50, ErrorMessage = "The field {0} only can contain {1} characters length.")]
         [Required]
         public string Name { get; set; }
 
@@ -36,6 +30,18 @@ namespace Shop.Web.Data.Entities
         public double Stock { get; set; }
 
         public User User { get; set; }
-    }
 
+        public string ImageFullPath
+        {
+            get
+            {
+                if(string.IsNullOrEmpty(this.ImageUrl))
+                {
+                    return null;
+                }
+
+                return $"https://shopzulu.azurewebsites.net{this.ImageUrl.Substring(1)}";
+            }
+        }
+    }
 }

@@ -1,6 +1,4 @@
-﻿
-
-namespace Shop.Web.Data
+﻿namespace Shop.Web.Data
 {
     using System.Linq;
     using System.Threading.Tasks;
@@ -19,5 +17,4 @@ namespace Shop.Web.Data
 
         Task<bool> ExistAsync(int id);
     }
-
 }

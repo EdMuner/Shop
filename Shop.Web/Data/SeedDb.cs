@@ -1,43 +1,40 @@
-﻿
-namespace Shop.Web.Data
+﻿namespace Shop.Web.Data
 {
-
     using System;
-    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
     using Entities;
-    using Microsoft.AspNetCore.Identity;
     using Helpers;
+    using Microsoft.AspNetCore.Identity;
 
     public class SeedDb
     {
         private readonly DataContext context;
         private readonly IUserHelper userHelper;
-        private Random random;
+        private readonly Random random;
 
         public SeedDb(DataContext context, IUserHelper userHelper)
         {
-           
             this.context = context;
             this.userHelper = userHelper;
             this.random = new Random();
-        }       
+        }
 
         public async Task SeedAsync()
         {
             await this.context.Database.EnsureCreatedAsync();
 
-            var user = await this.userHelper.GetUserByEmailAsync("edisonmunera72@gmail.com");
+            // Add user
+            var user = await this.userHelper.GetUserByEmailAsync("jzuluaga55@gmail.com");
             if (user == null)
             {
                 user = new User
                 {
-                    FirstName = "Edi",
-                    LastName = "Munera",
-                    Email = "edisonmunera72@gmail.com",
-                    UserName = "edisonmunera72@gmail.com",
-                    PhoneNumber = "3147187953"
+                    FirstName = "Juan",
+                    LastName = "Zuluaga",
+                    Email = "jzuluaga55@gmail.com",
+                    UserName = "jzuluaga55@gmail.com",
+                    PhoneNumber = "3506342747"
                 };
 
                 var result = await this.userHelper.AddUserAsync(user, "123456");
@@ -47,9 +44,10 @@ namespace Shop.Web.Data
                 }
             }
 
+            // Add products
             if (!this.context.Products.Any())
             {
-                this.AddProduct("iPhone XS", user);
+                this.AddProduct("iPhone X", user);
                 this.AddProduct("Magic Mouse", user);
                 this.AddProduct("iWatch Series 4", user);
                 await this.context.SaveChangesAsync();
@@ -63,7 +61,8 @@ namespace Shop.Web.Data
                 Name = name,
                 Price = this.random.Next(1000),
                 IsAvailabe = true,
-                Stock = this.random.Next(100)
+                Stock = this.random.Next(100),
+                User = user
             });
         }
     }

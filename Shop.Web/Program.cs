@@ -1,6 +1,4 @@
-﻿
-
-namespace Shop.Web
+﻿namespace Shop.Web
 {
     using Data;
     using Microsoft.AspNetCore;
@@ -31,4 +29,3 @@ namespace Shop.Web
                 .UseStartup<Startup>();
     }
 }
-

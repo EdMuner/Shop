@@ -1,12 +1,8 @@
-﻿
-
-namespace Shop.Web.Data
+﻿namespace Shop.Web.Data
 {
-
-     using Entities;
+    using Entities;
 
     public interface ICountryRepository : IGenericRepository<Country>
     {
-
     }
 }

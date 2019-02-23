@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 namespace Shop.Web.Controllers.API
 {
     [Route("api/[Controller]")]
-
     public class ProductsController : Controller
     {
         private readonly IProductRepository productRepository;
@@ -21,9 +20,7 @@ namespace Shop.Web.Controllers.API
         [HttpGet]
         public IActionResult GetProducts()
         {
-            return Ok(this.productRepository.GetAll());
+            return Ok(this.productRepository.GetAllWithUsers());
         }
-
-
     }
 }
