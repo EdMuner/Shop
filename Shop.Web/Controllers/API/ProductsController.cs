@@ -17,7 +17,6 @@ namespace Shop.Web.Controllers.API
             this.productRepository = productRepository;
         }
 
-
         [HttpGet]
         public IActionResult GetProducts()
         {
