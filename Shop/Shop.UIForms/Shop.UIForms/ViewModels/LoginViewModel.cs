@@ -1,8 +1,8 @@
 ﻿namespace Shop.UIForms.ViewModels
 {
-    using GalaSoft.MvvmLight.Command;
-    using System;
+   
     using System.Windows.Input;
+    using GalaSoft.MvvmLight.Command;
     using Xamarin.Forms;
 
     public class LoginViewModel
