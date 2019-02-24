@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace Shop.UIForms.iOS
+namespace ShopUIForms.iOS
 {
     public class Application
     {

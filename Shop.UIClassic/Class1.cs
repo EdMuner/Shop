@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Shop.UIClassic
+namespace Shop.UICLassic
 {
     public class Class1
     {

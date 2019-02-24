@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("Shop.UIClassicAndroid.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("Shop.UICLassic.Android.Resource", IsApplication=true)]
 
-namespace Shop.UIClassicAndroid
+namespace Shop.UICLassic.Android
 {
 	
 	
