@@ -40,7 +40,7 @@
                     return null;
                 }
 
-                return $"https://shopzulu.azurewebsites.net{this.ImageUrl.Substring(1)}";
+                return $"https://shopwebmunera.azurewebsites.net{this.ImageUrl.Substring(1)}";
             }
         }
     }

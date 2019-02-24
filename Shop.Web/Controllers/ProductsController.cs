@@ -80,7 +80,7 @@
 
                 var product = this.ToProduct(view, path);
                 // TODO: Pending to change to: this.User.Identity.Name
-                product.User = await this.userHelper.GetUserByEmailAsync("jzuluaga55@gmail.com");
+                product.User = await this.userHelper.GetUserByEmailAsync("edisonmunera72@gmail.com");
                 await this.productRepository.CreateAsync(product);
                 return RedirectToAction(nameof(Index));
             }
@@ -167,9 +167,10 @@
                         path = $"~/images/Products/{file}";
                     }
 
+
                     var product = this.ToProduct(view, path);
                     // TODO: Pending to change to: this.User.Identity.Name
-                    product.User = await this.userHelper.GetUserByEmailAsync("jzuluaga55@gmail.com");
+                    product.User = await this.userHelper.GetUserByEmailAsync("edisonmunera72@gmail.com");
                     await this.productRepository.UpdateAsync(product);
                 }
                 catch (DbUpdateConcurrencyException)
